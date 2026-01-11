@@ -1,4 +1,4 @@
-name = "lotto-web"
+name = "card-csl-project"
 main = "worker.js"
 compatibility_date = "2024-09-23"
 
