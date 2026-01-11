@@ -37,3 +37,20 @@ function displayNumbers(numbers) {
         container.appendChild(ball);
     });
 }
+
+const audio = document.getElementById('storyAudio');
+const playBtn = document.getElementById('playStoryBtn');
+
+playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '⏸ 이야기 멈추기';
+    } else {
+        audio.pause();
+        playBtn.textContent = '🐯 옛날 이야기 듣기';
+    }
+});
+
+audio.addEventListener('ended', function() {
+    playBtn.textContent = '🐯 옛날 이야기 듣기';
+});
