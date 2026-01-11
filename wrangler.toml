@@ -1,0 +1,8 @@
+name = "lotto-web"
+compatibility_date = "2024-09-23"
+
+# Configure this as a static asset deployment
+# The "assets" configuration tells Cloudflare to serve files from this directory
+[assets]
+directory = "."
+binding = "ASSETS"
