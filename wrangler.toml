@@ -1,8 +1,9 @@
 name = "lotto-web"
+main = "worker.js"
 compatibility_date = "2024-09-23"
 
-# Configure this as a static asset deployment
-# The "assets" configuration tells Cloudflare to serve files from this directory
+# [assets] 설정을 사용하여 정적 파일 디렉토리를 지정합니다.
+# worker.js에서 env.ASSETS로 접근할 수 있습니다.
 [assets]
-directory = "."
+directory = "./public"
 binding = "ASSETS"
