@@ -54,3 +54,20 @@ playBtn.addEventListener('click', function() {
 audio.addEventListener('ended', function() {
     playBtn.textContent = '🐯 옛날 이야기 듣기';
 });
+
+const sibaBtn = document.getElementById('playSibaBtn');
+const videoContainer = document.getElementById('videoContainer');
+const sibaVideo = document.getElementById('sibaVideo');
+
+sibaBtn.addEventListener('click', function() {
+    if (videoContainer.style.display === 'none') {
+        videoContainer.style.display = 'block';
+        sibaVideo.play();
+        sibaBtn.textContent = '🐕 영상 닫기';
+    } else {
+        sibaVideo.pause();
+        sibaVideo.currentTime = 0;
+        videoContainer.style.display = 'none';
+        sibaBtn.textContent = '🐕 시바견 영상 보기';
+    }
+});
